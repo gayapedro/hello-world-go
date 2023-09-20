@@ -6,7 +6,7 @@ COPY . .
 
 RUN go build -ldflags="-s -w" hello.go
 
-FROM gcr.io/distroless/static-debian11
+FROM busybox:1.35.0-uclibc
 
 WORKDIR /app
 
